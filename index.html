@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#243c35">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>PikoBuy spreadsheet : catégories, tailles et guide QC</title>
+  <meta name="description" content="Explorez le guide PikoBuy spreadsheet : chaussures, vêtements et accessoires. Comparez les tailles, lisez les photos QC et préparez votre sélection.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="PikoBuy spreadsheet — Le carnet des choix réfléchis">
+  <meta property="og:description" content="Des catégories accessibles, des repères de taille et une méthode simple pour examiner une fiche avant de commander.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PikoBuy spreadsheet : le guide en français">
+  <meta name="twitter:description" content="Chaussures, vêtements, accessoires : les bons détails à comparer avant de choisir.">
+  <link rel="preconnect" href="https://static.nike.com">
+  <!--
+    Fichier : index.html
+    Recherche éditoriale : accès direct aux résultats Google indisponible ;
+    les dix domaines ci-dessous ont été repérés par recherche web.
+    Aucun classement Google ni collecte exhaustive de sa première page n'est revendiqué.
+
+    Corpus : pikobuy.to, pikobuybestsheet.com, pikobuys-spreadsheet.com,
+    pikobuyfinds.net, pikobuy.us, pikobuyspreadsheet.us,
+    pikobuy-spreadsheets.com, pikobuy.org, pikospreadsheets.net,
+    pikospreadsheet.com.
+
+    Axes observés : catégories, liens produits, photos QC, tailles,
+    comparaison des variantes et préparation de l'expédition.
+    Les textes ci-dessous sont originaux ; les volumes, promotions et
+    affirmations de vérification des sites consultés ne sont pas repris.
+
+    Quatre expressions secondaires :
+    PikoBuy finds ; guide PikoBuy en français ;
+    photos QC PikoBuy ; catégories PikoBuy.
+
+    Trente intentions de longue traîne, traitées dans les sections visibles :
+    comment utiliser un PikoBuy spreadsheet ; lire une fiche produit PikoBuy ;
+    comparer des PikoBuy finds ; choisir une catégorie PikoBuy ;
+    vérifier un lien produit PikoBuy ; préparer une sélection PikoBuy ;
+    choisir sa pointure en centimètres ; comparer la longueur intérieure ;
+    examiner la semelle de sneakers ; contrôler les coutures de chaussures ;
+    mesurer un sweat à plat ; comparer une coupe oversize ;
+    lire un tableau de tailles ; choisir la longueur d'un t-shirt ;
+    examiner la doublure d'une veste ; comparer la taille d'un pantalon ;
+    vérifier la longueur d'un short ; mesurer le tour de tête ;
+    comparer les mesures d'un ensemble ; vérifier la composition de sous-vêtements ;
+    choisir la coupe d'un maillot ; mesurer la longueur d'un bracelet ;
+    lire des photos QC PikoBuy ; comparer un coloris sur plusieurs photos ;
+    demander une mesure complémentaire ; distinguer photo catalogue et photo QC ;
+    évaluer le coût total d'une sélection ; vérifier le poids d'un colis ;
+    préparer une livraison vers la France ; vérifier les conditions de retour.
+
+    Aucune URL canonique n'est inventée : à renseigner après attribution
+    de l'adresse publique définitive de ce document.
+  -->
+  <style>
+    :root{
+      --paper:#f5f1e8;
+      --white:#fffdf8;
+      --ink:#243c35;
+      --muted:#59645c;
+      --line:#d5d8cb;
+      --accent:#a7472d;
+      --soft:#e6eadc;
+      --serif:Georgia,"Times New Roman",serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration-thickness:1px;text-underline-offset:4px}
+    a:hover{color:var(--accent)}
+    a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+    img{display:block;max-width:100%;height:auto}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2,h3{line-height:1.15}
+    h1,h2{font-family:var(--serif);font-weight:400}
+    h1{font-size:clamp(2.8rem,6.8vw,5.8rem);letter-spacing:-.055em}
+    h2{font-size:clamp(2rem,3.5vw,3.1rem);letter-spacing:-.035em}
+    h3{font-size:1.13rem}
+    p+p{margin-top:1rem}
+    .wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+    .eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:750}
+    .masthead{border-bottom:1px solid var(--line)}
+    .masthead .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-block:23px}
+    .logo{font-size:1.12rem;font-weight:800;letter-spacing:-.03em;text-decoration:none;white-space:nowrap}
+    .masthead p{font-size:.8rem;color:var(--muted);text-align:right}
+    .categories{padding-block:25px 30px;border-bottom:1px solid var(--line)}
+    .category-heading{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:15px}
+    .category-heading p{font-size:.8rem;color:var(--muted)}
+    .category-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+    .category-grid a{min-height:58px;border:1px solid var(--line);background:var(--white);padding:12px;display:flex;justify-content:space-between;gap:8px;align-items:center;text-decoration:none;font-size:.85rem;font-weight:650}
+    .category-grid a:hover{background:var(--soft);border-color:var(--ink)}
+    .category-grid span{font-size:.8rem;color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;padding-block:58px}
+    .hero .eyebrow{margin-bottom:22px;color:var(--accent)}
+    .hero h1 span{display:block;font-size:.48em;letter-spacing:-.03em;margin-top:16px}
+    .intro{margin-top:25px;max-width:54ch;color:var(--muted)}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:22px;background:var(--ink);color:white;padding:14px 22px;font-size:.9rem;font-weight:650;text-decoration:none;border:1px solid var(--ink)}
+    .button:hover{background:var(--accent);border-color:var(--accent);color:white}
+    .hero .button{margin-top:26px}
+    .hero-visual{position:relative;padding:20px;background:#e6e7dd;border:1px solid var(--line)}
+    .hero-visual img{width:100%;aspect-ratio:1;object-fit:contain;background:#f5f5f5}
+    figcaption{font-size:.75rem;line-height:1.55;color:var(--muted);padding-top:12px}
+    .visual-tag{position:absolute;left:4px;top:35px;background:var(--accent);color:white;padding:8px 16px;font-size:.7rem;letter-spacing:.1em;transform:translateX(-14px)}
+    .answer{display:grid;grid-template-columns:210px 1fr;gap:28px;background:var(--soft);border-block:1px solid #c6cebb;padding:28px 32px}
+    .answer h2{font:750 .75rem/1.6 system-ui;letter-spacing:.12em;text-transform:uppercase}
+    .answer p{max-width:85ch}
+    .section{padding-block:62px;border-bottom:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:1fr 1fr;gap:35px;margin-bottom:30px;align-items:end}
+    .section-head .eyebrow{display:block;margin-bottom:12px;color:var(--accent)}
+    .section-head p{color:var(--muted);max-width:52ch}
+    .edits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+    .edit{background:var(--white);border:1px solid var(--line)}
+    .edit figure{padding:15px 15px 0}
+    .edit img{width:100%;aspect-ratio:1;object-fit:contain;background:#f7f7f5}
+    .edit-copy{padding:22px}
+    .edit-copy .eyebrow{color:var(--accent);margin-bottom:12px}
+    .edit-copy h3{font:400 1.6rem/1.2 var(--serif);margin-bottom:14px}
+    .edit-copy p{font-size:.9rem;color:var(--muted)}
+    .edit-copy a{display:inline-block;margin-top:17px;font-size:.85rem;font-weight:700}
+    .note{font-size:.8rem;color:var(--muted);margin-top:22px;max-width:95ch}
+    .method{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px}
+    .method h2{margin-top:13px}
+    .steps{list-style:none;margin:0;padding:0;counter-reset:step}
+    .steps li{counter-increment:step;display:grid;grid-template-columns:40px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
+    .steps li:before{content:"0" counter(step);font:400 1.6rem/1.2 var(--serif);color:var(--accent)}
+    .steps h3{margin-bottom:8px}
+    .steps p{font-size:.94rem;color:var(--muted)}
+    .table-scroll{overflow-x:auto}
+    table{width:100%;border-collapse:collapse;text-align:left;font-size:.9rem}
+    caption{text-align:left;margin-bottom:16px;color:var(--muted)}
+    th,td{padding:18px 16px;vertical-align:top;border-bottom:1px solid var(--line)}
+    th{background:var(--ink);color:white;font-weight:650}
+    td:first-child{font-weight:700;width:22%}
+    tbody tr:nth-child(even){background:#edeee3}
+    .journal{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+    .journal article{padding-top:22px;border-top:3px solid var(--ink)}
+    .journal .eyebrow{color:var(--accent);margin-bottom:12px}
+    .journal h3{font:400 1.8rem/1.2 var(--serif);margin-bottom:20px}
+    .journal p{font-size:.94rem;color:var(--muted)}
+    .journal ul{padding-left:20px;font-size:.92rem;color:var(--muted)}
+    .journal li+li{margin-top:9px}
+    .journal a{display:inline-block;margin-top:18px;font-size:.9rem;font-weight:700}
+    .faq-layout{display:grid;grid-template-columns:.65fr 1.35fr;gap:55px}
+    .faq-layout .eyebrow{color:var(--accent);margin-bottom:12px}
+    details{border-top:1px solid var(--line);padding:19px 0}
+    details:last-child{border-bottom:1px solid var(--line)}
+    summary{cursor:pointer;font-weight:700;padding-right:12px}
+    details p{margin-top:13px;color:var(--muted);font-size:.94rem}
+    .closing{display:flex;justify-content:space-between;gap:28px;align-items:center;background:var(--ink);color:var(--white);padding:35px;margin-block:40px}
+    .closing h2{font-size:2rem;margin-bottom:10px}
+    .closing p{font-size:.9rem;color:#dce2d7}
+    .closing .button{background:var(--paper);color:var(--ink);white-space:nowrap}
+    footer{padding-block:8px 35px;font-size:.79rem;color:var(--muted)}
+    .footer-top{display:flex;justify-content:space-between;gap:20px;padding-block:15px}
+    footer>p{max-width:100ch}
+    @media(min-width:900px){
+      .section{content-visibility:auto;contain-intrinsic-size:auto 650px}
+    }
+    @media(max-width:850px){
+      .category-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .hero{gap:28px}
+      .answer{grid-template-columns:1fr;gap:12px}
+      .edits{gap:12px}
+      .edit-copy{padding:16px}
+      .method,.faq-layout{grid-template-columns:1fr;gap:28px}
+    }
+    @media(max-width:600px){
+      .wrap{width:calc(100% - 28px)}
+      .masthead .wrap{padding-block:18px}
+      .masthead p{font-size:.7rem;max-width:130px}
+      .category-heading{display:block}
+      .category-heading p{margin-top:6px}
+      .category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .category-grid a{font-size:.8rem;padding:10px}
+      .hero{grid-template-columns:1fr;padding-block:35px;gap:30px}
+      .hero-visual{max-width:440px;width:100%;justify-self:center}
+      .hero h1{overflow-wrap:anywhere}
+      .hero h1 span{font-size:.54em}
+      .hero .intro{font-size:.95rem}
+      .answer{padding:23px}
+      .section{padding-block:40px}
+      .section-head,.edits,.journal{grid-template-columns:1fr}
+      .section-head{gap:18px}
+      .edits{gap:24px}
+      .edit figure{display:grid;grid-template-columns:130px 1fr;gap:15px;align-items:center;padding:15px}
+      .edit figcaption{padding:0}
+      .edit-copy{padding:6px 20px 22px}
+      th,td{padding:13px 10px;min-width:140px}
+      .closing{display:block;padding:25px}
+      .closing .button{margin-top:22px;white-space:normal}
+      .footer-top{display:block}
+      .footer-top span{display:block;margin-top:8px}
+    }
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+    @media print{
+      body{background:white;color:black}
+      .button,.closing{display:none}
+      .section{content-visibility:visible}
+      a{color:black}
+      .hero{padding-block:20px}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "@id":"#page",
+        "name":"PikoBuy spreadsheet : catégories, tailles et guide QC",
+        "description":"Un guide indépendant en français pour comparer les catégories, les mesures et les photos avant de préparer une sélection.",
+        "inLanguage":"fr",
+        "mainEntity":{"@id":"#guide"},
+        "hasPart":[{"@id":"#article-qc"},{"@id":"#article-budget"},{"@id":"#faq"}]
+      },
+      {
+        "@type":"Article",
+        "@id":"#guide",
+        "headline":"PikoBuy spreadsheet : le carnet des choix réfléchis",
+        "inLanguage":"fr",
+        "description":"Une méthode en quatre étapes pour définir une recherche, comparer des fiches, examiner les photos et préparer une sélection.",
+        "about":[
+          {"@type":"Thing","name":"Comparaison des vêtements et accessoires"},
+          {"@type":"Thing","name":"Lecture des tableaux de tailles"},
+          {"@type":"Thing","name":"Photos de contrôle qualité"}
+        ]
+      },
+      {
+        "@type":"Article",
+        "@id":"#article-qc",
+        "headline":"Photos QC PikoBuy : observer sans surinterpréter",
+        "inLanguage":"fr",
+        "description":"Distinguer les photos catalogue des photos de contrôle, vérifier la variante et demander des mesures complémentaires."
+      },
+      {
+        "@type":"Article",
+        "@id":"#article-budget",
+        "headline":"Préparer une sélection cohérente et un budget complet",
+        "inLanguage":"fr",
+        "description":"Limiter les doublons et examiner le coût des articles, des services éventuels et de l'expédition avant de décider."
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"#faq",
+        "inLanguage":"fr",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Qu'est-ce qu'un PikoBuy spreadsheet ?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"C'est une liste organisée de liens et de repères produits destinée à faciliter la recherche. Elle peut présenter des catégories, des variantes et des références photographiques. Chaque fiche doit être vérifiée à sa source."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Cette page est-elle affiliée à PikoBuy ou aux marques présentées ?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Non. Ce guide éditorial indépendant ne représente pas PikoBuy, Nike, Louis Vuitton, Gucci, Hermès ou Dior. Les visuels servent de références et ne prouvent ni une disponibilité ni une authenticité."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Où mènent les liens de cette page ?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Les dix liens de catégories ouvrent les rubriques correspondantes de hipobuyfind.com. Tous les autres liens ouvrent https://www.hipobuyfind.com. Ils ne constituent pas des liens directs vers PikoBuy."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Comment choisir une taille sans essayer ?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Mesurez un vêtement qui vous va, posé à plat, puis comparez les mêmes points avec le tableau du vendeur. Pour les chaussures, distinguez longueur du pied et longueur intérieure. Demandez une mesure complémentaire si le tableau reste ambigu."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Les photos QC prouvent-elles l'authenticité ?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Non. Elles aident à observer l'état, les proportions et certains détails visibles, mais ne remplacent pas une preuve d'origine ni une expertise d'authentification."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Peut-on connaître le coût de livraison depuis ce guide ?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Non. Le coût dépend notamment de la destination, du transporteur, du poids facturable et des services choisis. Demandez une estimation actuelle au service utilisé et vérifiez ce qu'elle comprend avant de payer."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/onqlr/">
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <a class="logo" href="https://www.hipobuyfind.com" aria-label="Ouvrir hipobuyfind.com">hipobuyfind.com</a>
+      <p>Le carnet de recherche<br>Mode · détails · méthode</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="categories" aria-label="Catégories de vêtements et accessoires">
+      <div class="category-heading">
+        <h2 class="eyebrow">Choisir un rayon</h2>
+        <p>Accès aux catégories sur hipobuyfind.com</p>
+      </div>
+      <div class="category-grid">
+        <a href="https://hipobuyfind.com/category-911-Shoes.html" aria-label="Chaussures — Shoes">Chaussures <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html" aria-label="Sweats et pulls — Hoodies/Sweaters">Sweats &amp; pulls <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirts <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-914-Jackets.html" aria-label="Vestes — Jackets">Vestes <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html" aria-label="Pantalons et shorts — Pants/Shorts">Pantalons &amp; shorts <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-916-Headwear.html" aria-label="Couvre-chefs — Headwear">Couvre-chefs <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-917-Sets.html" aria-label="Ensembles — Sets">Ensembles <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html" aria-label="Sous-vêtements — Underwear/underpants">Sous-vêtements <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-919-Jersey.html" aria-label="Maillots — Jersey">Maillots <span aria-hidden="true">↗</span></a>
+        <a href="https://hipobuyfind.com/category-920-Accessories.html" aria-label="Accessoires — Accessories">Accessoires <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+
+    <section class="hero" aria-labelledby="main-title">
+      <div>
+        <p class="eyebrow">Guide PikoBuy en français</p>
+        <h1 id="main-title">PikoBuy spreadsheet<span>Moins d'hésitation.<br>Plus de repères.</span></h1>
+        <p class="intro">Une belle image donne envie. Les mesures, la matière et les détails permettent de choisir. Ce carnet vous aide à explorer les catégories PikoBuy, comparer vos pistes et préparer une sélection utile.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Explorer hipobuyfind.com <span aria-hidden="true">↗</span></a>
+        <p class="note">Guide indépendant. Les destinations proposées sont celles de hipobuyfind.com ; cette page ne permet pas de commander auprès de PikoBuy.</p>
+      </div>
+      <figure class="hero-visual">
+        <span class="visual-tag">LE DÉTAIL AVANT LE CHOIX</span>
+        <img
+          src="https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/918bc0dd-0a43-47f7-a0dd-b46a27d8679d/air-force-1-low-retro-camo-mens-shoes-3MLKyzIf.png"
+          width="864"
+          height="864"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          alt="Chaussure Nike Air Force 1 Low Retro Camo, visuel de référence du modèle">
+        <figcaption>Nike Air Force 1 Low Retro Camo — référence visuelle pour observer les panneaux, le profil et la semelle. Disponibilité à vérifier séparément.</figcaption>
+      </figure>
+    </section>
+
+    <aside class="answer" aria-labelledby="definition-title">
+      <h2 id="definition-title">La réponse en bref</h2>
+      <p>Un <strong>PikoBuy spreadsheet</strong> est une liste organisée de liens et de repères produits. Pour l'utiliser efficacement, choisissez une catégorie, vérifiez la variante, comparez les mesures et examinez les photos disponibles avant toute décision.</p>
+    </aside>
+
+    <section class="section" aria-labelledby="details-title">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Carnet visuel</span>
+          <h2 id="details-title">Trois façons de regarder autrement.</h2>
+        </div>
+        <p>La silhouette ne dit pas tout. Un vêtement, un couvre-chef et un bijou demandent des vérifications différentes.</p>
+      </div>
+
+      <div class="edits">
+        <article class="edit">
+          <figure>
+            <img
+              src="https://media.gucci.com/style/White_South_0_160_316x316/1678872603/694758_XKCC5_1440_001_100_0000_Light-GG-wool-jacquard-cardigan.jpg"
+              width="316"
+              height="316"
+              loading="lazy"
+              decoding="async"
+              alt="Cardigan Gucci à motif GG en jacquard de laine, présenté seul">
+            <figcaption>Référence : cardigan Gucci GG.</figcaption>
+          </figure>
+          <div class="edit-copy">
+            <p class="eyebrow">01 / La coupe</p>
+            <h3>Le volume se mesure.</h3>
+            <p>Comparez la largeur de poitrine, les épaules et la longueur des manches. Pour une coupe oversize, partez d'un vêtement que vous portez déjà plutôt que de choisir une lettre au hasard.</p>
+            <a href="https://www.hipobuyfind.com">Continuer la recherche de vêtements ↗</a>
+          </div>
+        </article>
+
+        <article class="edit">
+          <figure>
+            <img
+              src="https://media.gucci.com/style/White_South_0_160_316x316/1645725665/696856_4HAOB_4068_001_100_0000_Light-Original-GG-canvas-flat-cap.jpg"
+              width="316"
+              height="316"
+              loading="lazy"
+              decoding="async"
+              alt="Casquette plate Gucci Original GG en toile, visuel produit">
+            <figcaption>Référence : casquette plate Gucci GG.</figcaption>
+          </figure>
+          <div class="edit-copy">
+            <p class="eyebrow">02 / Les proportions</p>
+            <h3>Un bon tour de tête.</h3>
+            <p>Mesurez le tour de tête à l'endroit où repose le couvre-chef. Vérifiez aussi la profondeur, la rigidité et le système de réglage : une taille compatible ne décrit pas toute la forme.</p>
+            <a href="https://www.hipobuyfind.com">Explorer les idées d'accessoires ↗</a>
+          </div>
+        </article>
+
+        <article class="edit">
+          <figure>
+            <img
+              src="https://media.gucci.com/style/White_South_0_160_316x316/1663606860/729370_J8500_8000_001_100_0000_Light-Icon-star-bracelet.jpg"
+              width="316"
+              height="316"
+              loading="lazy"
+              decoding="async"
+              alt="Bracelet Gucci Icon star, visuel de référence du bijou">
+            <figcaption>Référence : bracelet Gucci Icon star.</figcaption>
+          </figure>
+          <div class="edit-copy">
+            <p class="eyebrow">03 / Le contact</p>
+            <h3>La matière compte aussi.</h3>
+            <p>Pour un bracelet, relevez la longueur utile, le type de fermoir et la composition déclarée. Une photographie ne permet pas de confirmer un métal, un placage ou une tolérance cutanée.</p>
+            <a href="https://www.hipobuyfind.com">Poursuivre la comparaison ↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="note">Ces images de marques illustrent des points de comparaison. Elles ne sont pas des photos QC d'articles proposés ici et ne garantissent pas leur présence sur le site de destination. Nike, Louis Vuitton (LV), Gucci, Hermès et Dior restent des marques distinctes, sans affiliation revendiquée avec ce guide.</p>
+    </section>
+
+    <section class="section method" aria-labelledby="method-title">
+      <div>
+        <p class="eyebrow">La méthode du carnet</p>
+        <h2 id="method-title">Transformer des PikoBuy finds en choix concrets.</h2>
+        <p class="intro">Une sélection courte et documentée est plus facile à comparer qu'une longue liste d'onglets sans notes.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Définir l'usage avant le modèle</h3>
+            <p>Chaussures pour marcher, veste à superposer ou maillot ample : notez l'usage, la coupe recherchée et les contraintes de matière. Cela donne un sens à votre recherche.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Lire la fiche et vérifier le lien</h3>
+            <p>Contrôlez le nom, la référence, la couleur et la taille sur la page de destination. Une image similaire ne suffit pas à identifier la même variante. Écartez les liens qui ouvrent une autre fiche.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Comparer des éléments comparables</h3>
+            <p>Utilisez les mêmes unités et les mêmes points de mesure. Distinguez les photos catalogue des photos de contrôle qualité. Notez les informations manquantes au lieu de les déduire du titre.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Confirmer les conditions avant de décider</h3>
+            <p>Vérifiez le montant actuel, les frais éventuels, la disponibilité de la variante et les conditions de retour. Si un service intermédiaire est utilisé, consultez ses conditions de contrôle et d'expédition.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="comparison-title">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Fiche pratique</span>
+          <h2 id="comparison-title">À chaque rayon, ses points de contrôle.</h2>
+        </div>
+        <p>Conservez ces repères pendant la comparaison. Quand une information manque, une question précise vaut mieux qu'une supposition.</p>
+      </div>
+      <div class="table-scroll" role="region" aria-label="Tableau des points de contrôle par catégorie" tabindex="0">
+        <table>
+          <caption>Mesures et détails à relever sur les fiches et les photos disponibles.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Catégorie</th>
+              <th scope="col">À relever</th>
+              <th scope="col">À demander si nécessaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Chaussures</td>
+              <td>Pointure, longueur du pied conseillée, profil de semelle et régularité des coutures.</td>
+              <td>Longueur intérieure mesurée et vue rapprochée des deux chaussures.</td>
+            </tr>
+            <tr>
+              <td>Sweats &amp; pulls</td>
+              <td>Poitrine à plat, longueur du dos, manches et composition.</td>
+              <td>Méthode de mesure et gros plan de l'intérieur du tissu.</td>
+            </tr>
+            <tr>
+              <td>T-shirts</td>
+              <td>Largeur, longueur totale, encolure et dimensions du motif.</td>
+              <td>Photo à plat permettant de comparer les proportions.</td>
+            </tr>
+            <tr>
+              <td>Vestes</td>
+              <td>Épaules, aisance, doublure, poches et fermeture.</td>
+              <td>Vue intérieure et mesure avec la fermeture fermée.</td>
+            </tr>
+            <tr>
+              <td>Pantalons &amp; shorts</td>
+              <td>Tour de taille, fourche, entrejambe et largeur du bas.</td>
+              <td>Mesures au repos et étirées si la taille est élastique.</td>
+            </tr>
+            <tr>
+              <td>Couvre-chefs</td>
+              <td>Circonférence, profondeur et réglage.</td>
+              <td>Photo du système de réglage et plage de tailles annoncée.</td>
+            </tr>
+            <tr>
+              <td>Ensembles</td>
+              <td>Mesures du haut et du bas, cohérence du coloris.</td>
+              <td>Possibilité de choisir des tailles différentes pour chaque pièce.</td>
+            </tr>
+            <tr>
+              <td>Sous-vêtements</td>
+              <td>Composition, élasticité, taille et entretien.</td>
+              <td>Conditions de retour applicables à cette catégorie.</td>
+            </tr>
+            <tr>
+              <td>Maillots</td>
+              <td>Coupe, longueur, matière et personnalisation éventuelle.</td>
+              <td>Dimensions du marquage et conditions liées à la personnalisation.</td>
+            </tr>
+            <tr>
+              <td>Accessoires</td>
+              <td>Dimensions, composition déclarée, fermoirs et finitions.</td>
+              <td>Vue rapprochée et mesure utile du bracelet, de la ceinture ou de la chaîne.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="journal-title">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Dossiers de lecture</span>
+          <h2 id="journal-title">Deux sujets à lire avant de valider.</h2>
+        </div>
+        <p>La recherche ne s'arrête pas au choix d'une catégorie. Les images et le coût complet méritent chacun un examen séparé.</p>
+      </div>
+
+      <div class="journal">
+        <article id="article-qc" aria-labelledby="qc-title">
+          <p class="eyebrow">Dossier / Images</p>
+          <h3 id="qc-title">Photos QC PikoBuy : observer sans surinterpréter</h3>
+          <p>« QC » désigne le contrôle qualité. Lorsqu'elles sont disponibles, ses photographies permettent d'examiner un article concret. Commencez par vérifier qu'elles correspondent à la bonne référence, au bon coloris et à la bonne taille.</p>
+          <p>Une lumière chaude peut modifier la perception d'une couleur. Un angle rapproché peut déformer les proportions. Pour comparer, recherchez plusieurs vues cohérentes et une mesure visible lorsque la taille est déterminante.</p>
+          <ul>
+            <li><strong>Vue d'ensemble :</strong> forme, symétrie et éléments présents.</li>
+            <li><strong>Vue de détail :</strong> coutures, fermeture, motif et bords.</li>
+            <li><strong>Mesure complémentaire :</strong> longueur ou largeur au point exact qui vous intéresse.</li>
+          </ul>
+          <p>Ces observations ne constituent pas une authentification. Un logo lisible ou une finition soignée ne prouve pas l'origine d'un article ; celle-ci doit être établie séparément.</p>
+          <a href="https://www.hipobuyfind.com">Ouvrir le catalogue pour poursuivre la recherche ↗</a>
+        </article>
+
+        <article id="article-budget" aria-labelledby="budget-title">
+          <p class="eyebrow">Dossier / Sélection</p>
+          <h3 id="budget-title">Préparer une sélection cohérente et un budget complet</h3>
+          <p>Avant d'ajouter une nouvelle pièce, notez ce qu'elle apporte : une coupe différente, une couche pour la saison ou un remplacement utile. Deux articles presque identiques peuvent multiplier les incertitudes sans répondre à un besoin supplémentaire.</p>
+          <p>Comparez ensuite le coût au même stade de l'achat. Le montant d'une fiche peut exclure des services ou une expédition. Pour un colis, vérifiez le poids facturable, les dimensions et les options retenues auprès du service utilisé.</p>
+          <ul>
+            <li><strong>Articles :</strong> quantité, variante et montant actuel.</li>
+            <li><strong>Services :</strong> contrôles supplémentaires ou emballage, s'ils sont facturés.</li>
+            <li><strong>Transport :</strong> estimation actualisée pour votre destination et contenu inclus.</li>
+          </ul>
+          <p>Pour une livraison vers la France ou un autre pays, consultez les conditions applicables à la destination avant le paiement. Ce carnet ne fournit aucun tarif de transport ni délai garanti.</p>
+          <a href="https://www.hipobuyfind.com">Revenir à la sélection sur hipobuyfind.com ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq-layout" aria-labelledby="faq-title">
+      <div>
+        <p class="eyebrow">Questions fréquentes</p>
+        <h2 id="faq-title">Des réponses qui vont droit au détail.</h2>
+        <p class="intro">Définition, tailles, photos et destinations des liens : les repères essentiels du guide.</p>
+      </div>
+
+      <div id="faq">
+        <details open>
+          <summary>Qu'est-ce qu'un PikoBuy spreadsheet ?</summary>
+          <p>C'est une liste organisée de liens et de repères produits destinée à faciliter la recherche. Elle peut présenter des catégories, des variantes et des références photographiques. Chaque fiche doit être vérifiée à sa source.</p>
+        </details>
+        <details>
+          <summary>Cette page est-elle affiliée à PikoBuy ou aux marques présentées ?</summary>
+          <p>Non. Ce guide éditorial indépendant ne représente pas PikoBuy, Nike, Louis Vuitton, Gucci, Hermès ou Dior. Les visuels servent de références et ne prouvent ni une disponibilité ni une authenticité.</p>
+        </details>
+        <details>
+          <summary>Où mènent les liens de cette page ?</summary>
+          <p>Les dix liens de catégories ouvrent les rubriques correspondantes de hipobuyfind.com. Tous les autres liens ouvrent https://www.hipobuyfind.com. Ils ne constituent pas des liens directs vers PikoBuy.</p>
+        </details>
+        <details>
+          <summary>Comment choisir une taille sans essayer ?</summary>
+          <p>Mesurez un vêtement qui vous va, posé à plat, puis comparez les mêmes points avec le tableau du vendeur. Pour les chaussures, distinguez longueur du pied et longueur intérieure. Demandez une mesure complémentaire si le tableau reste ambigu.</p>
+        </details>
+        <details>
+          <summary>Les photos QC prouvent-elles l'authenticité ?</summary>
+          <p>Non. Elles aident à observer l'état, les proportions et certains détails visibles, mais ne remplacent pas une preuve d'origine ni une expertise d'authentification.</p>
+        </details>
+        <details>
+          <summary>Peut-on connaître le coût de livraison depuis ce guide ?</summary>
+          <p>Non. Le coût dépend notamment de la destination, du transporteur, du poids facturable et des services choisis. Demandez une estimation actuelle au service utilisé et vérifiez ce qu'elle comprend avant de payer.</p>
+        </details>
+      </div>
+    </section>
+
+    <aside class="closing" aria-label="Poursuivre la recherche">
+      <div>
+        <h2>Une catégorie. Quelques mesures. Un choix plus clair.</h2>
+        <p>Gardez vos critères en tête et poursuivez votre recherche sur hipobuyfind.com.</p>
+      </div>
+      <a class="button" href="https://www.hipobuyfind.com">Consulter le site <span aria-hidden="true">↗</span></a>
+    </aside>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-top">
+      <a class="logo" href="https://www.hipobuyfind.com">hipobuyfind.com</a>
+      <span>PikoBuy spreadsheet · Carnet indépendant en français</span>
+    </div>
+    <p>Contenu informatif. Les photographies de référence ne sont pas une offre de vente. Confirmez les caractéristiques, l'origine, la disponibilité et les conditions sur la fiche concernée avant tout achat.</p>
+  </footer>
+</body>
+</html>
